@@ -31,5 +31,9 @@ public class BookMyStayApp {
         System.out.println();
         ErrorHandlingValidation validation = new ErrorHandlingValidation();
         validation.run();
+
+        System.out.println();
+        UseCase10BookingCancellation cancellation = new UseCase10BookingCancellation();
+        cancellation.run();
     }
 }
