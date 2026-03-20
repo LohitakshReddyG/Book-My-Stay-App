@@ -1,4 +1,4 @@
-public class UseCase10BookingCancellation {
+public class BookingCancellation {
 
     public void run() {
         System.out.println("Booking Cancellation");

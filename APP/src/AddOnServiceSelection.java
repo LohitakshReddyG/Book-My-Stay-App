@@ -1,4 +1,4 @@
-public class UseCase7AddOnServiceSelection {
+public class AddOnServiceSelection {
 
     public void run() {
         System.out.println("Add-On Service Selection");

@@ -21,11 +21,11 @@ public class BookMyStayApp {
         allocationService.processQueue(queue, inventory);
 
         System.out.println();
-        UseCase7AddOnServiceSelection addOn = new UseCase7AddOnServiceSelection();
+        AddOnServiceSelection addOn = new AddOnServiceSelection();
         addOn.run();
 
         System.out.println();
-        UseCase8BookingHistoryReport historyReport = new UseCase8BookingHistoryReport();
+        BookingHistoryReport historyReport = new BookingHistoryReport();
         historyReport.run();
 
         System.out.println();
@@ -33,7 +33,11 @@ public class BookMyStayApp {
         validation.run();
 
         System.out.println();
-        UseCase10BookingCancellation cancellation = new UseCase10BookingCancellation();
+        BookingCancellation cancellation = new BookingCancellation();
         cancellation.run();
+
+        System.out.println();
+        ConcurrentBookingSimulation concurrent = new ConcurrentBookingSimulation();
+        concurrent.run();
     }
 }
