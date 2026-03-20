@@ -1,4 +1,4 @@
-public class UseCase8BookingHistoryReport {
+public class BookingHistoryReport {
 
     public void run() {
         System.out.println("Booking History and Reporting\n");
