@@ -23,5 +23,9 @@ public class BookMyStayApp {
         System.out.println();
         UseCase7AddOnServiceSelection addOn = new UseCase7AddOnServiceSelection();
         addOn.run();
+
+        System.out.println();
+        UseCase8BookingHistoryReport historyReport = new UseCase8BookingHistoryReport();
+        historyReport.run();
     }
 }
