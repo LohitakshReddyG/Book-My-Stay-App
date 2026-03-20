@@ -27,5 +27,9 @@ public class BookMyStayApp {
         System.out.println();
         UseCase8BookingHistoryReport historyReport = new UseCase8BookingHistoryReport();
         historyReport.run();
+
+        System.out.println();
+        ErrorHandlingValidation validation = new ErrorHandlingValidation();
+        validation.run();
     }
 }
