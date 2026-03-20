@@ -39,5 +39,9 @@ public class BookMyStayApp {
         System.out.println();
         ConcurrentBookingSimulation concurrent = new ConcurrentBookingSimulation();
         concurrent.run();
+
+        System.out.println();
+        DataPersistenceRecovery persistence = new DataPersistenceRecovery();
+        persistence.run();
     }
 }
