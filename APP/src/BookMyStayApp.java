@@ -17,7 +17,11 @@ public class BookMyStayApp {
         queue.addRequest(new Reservation("Vanmathi", "Suite"));
 
         RoomInventory inventory = new RoomInventory();
-        RoomAllocationService service = new RoomAllocationService();
-        service.processQueue(queue, inventory);
+        RoomAllocationService allocationService = new RoomAllocationService();
+        allocationService.processQueue(queue, inventory);
+
+        System.out.println();
+        UseCase7AddOnServiceSelection addOn = new UseCase7AddOnServiceSelection();
+        addOn.run();
     }
 }
