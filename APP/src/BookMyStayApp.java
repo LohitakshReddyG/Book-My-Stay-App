@@ -1,33 +1,23 @@
 public class BookMyStayApp {
 
     public static void main(String[] args) {
-        System.out.println("Hotel Room Initialization\n");
 
-        // Create room objects
-        Room singleRoom = new SingleRoom();
-        Room doubleRoom = new DoubleRoom();
-        Room suiteRoom = new SuiteRoom();
+        System.out.println("=== Hotel Room Initialization ===\n");
+        InventorySetup setup = new InventorySetup();
+        setup.displayInventory();
 
-        // Static availability variables
-        int singleAvailable = 5;
-        int doubleAvailable = 3;
-        int suiteAvailable = 2;
+        System.out.println("\n=== Room Search ===\n");
+        RoomSearch roomSearch = new RoomSearch();
+        roomSearch.search();
 
-        // Display Single Room
-        System.out.println("Single Room:");
-        singleRoom.displayRoomDetails();
-        System.out.println("Available: " + singleAvailable);
-        System.out.println();
+        System.out.println("\n=== Room Allocation Processing ===\n");
+        BookingRequestQueue queue = new BookingRequestQueue();
+        queue.addRequest(new Reservation("Abhi", "Single"));
+        queue.addRequest(new Reservation("Subha", "Single"));
+        queue.addRequest(new Reservation("Vanmathi", "Suite"));
 
-        // Display Double Room
-        System.out.println("Double Room:");
-        doubleRoom.displayRoomDetails();
-        System.out.println("Available: " + doubleAvailable);
-        System.out.println();
-
-        // Display Suite Room
-        System.out.println("Suite Room:");
-        suiteRoom.displayRoomDetails();
-        System.out.println("Available: " + suiteAvailable);
-        }
+        RoomInventory inventory = new RoomInventory();
+        RoomAllocationService service = new RoomAllocationService();
+        service.processQueue(queue, inventory);
+    }
 }

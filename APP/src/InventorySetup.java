@@ -1,6 +1,7 @@
 import java.util.Map;
+
 public class InventorySetup {
-    public static void main(String[] args) {
+    public void displayInventory() {
         System.out.println("Hotel Room Inventory Status\n");
 
         Room singleRoom = new SingleRoom();
